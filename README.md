@@ -5,7 +5,7 @@ by Derek Huang
 _last updated on: 01-26-2020_  
 _file created on: 01-24-2020_
 
-This repository is a quick analysis of the Kaggle dataset of diabetes occurrence in Pima Indian females, which may be found [here](https://www.kaggle.com/uciml/pima-indians-diabetes-database). By no means is this a comprehensive exploration; for example, the model hypothesis set can be expanded, PCA features experimented with, and some more involved feature engineering performed (both manual and with packages such as `featuretools`).
+This repository is a quick analysis of the Kaggle dataset of diabetes occurrence in Pima Indian females, which may be found [here](https://www.kaggle.com/uciml/pima-indians-diabetes-database). By no means is this a comprehensive exploration; for example, the model hypothesis set can be expanded, PCA features experimented with, and more involved feature engineering performed (both manually and with packages like `featuretools`).
 
 Contributors: Derek Huang
 
@@ -67,15 +67,15 @@ Except for `gbcr_srcv.pickle`, all files are pickled `sklearn.model_selection.Gr
 
 * **./models/gbc_gscv.pickle**
 
-`GridSearchCV` results from training a `sklearn` gradient boosting model with tree stumps as base learners and with shrinkage on `X_train` and `y_train`.
+`GridSearchCV` results from training a `sklearn` gradient boosting model with shrinkage and without subsampling on `X_train` and `y_train`, using 400 tree stumps as base learners.
 
 * **./models/gbce_gscv.pickle**
 
-`GridSearchCV` results from training a `sklearn` gradient boosting model with tree stumps as base learners and with shrinkage on `Xe_train` and `y_train`.
+`GridSearchCV` results from training a `sklearn` gradient boosting model with shrinkage and without subsampling on `Xe_train` and `y_train`, using 400 tree stumps as base learners.
 
 * **./models/gbcr_srcv.pickle**
 
-`shizukaBaseCV` results from training a `sklearn` gradient boosting model with tree stumps as base learners and with shrinkage on `X_train` and `y_train`, but for each validation iteration, resampling the training folds using the `imblearn` implementation of SMOTE. Unlike `GridSearchCV` objects, the parameters were already fixed.
+`shizukaBaseCV` results from training a `sklearn` gradient boosting model with shrinkage and without subsampling on `X_train` and `y_train`, using 400 tree stumps as base learners. Hoever, for each validation iteration, training folds were resampled using the `imblearn` implementation of SMOTE. Unlike `GridSearchCV` objects, hyperparameters were already fixed.
 
 ## Figures
 
