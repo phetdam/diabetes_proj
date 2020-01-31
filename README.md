@@ -2,10 +2,12 @@
 
 by Derek Huang
 
-_last updated on: 01-26-2020_  
+_last updated on: 01-31-2020_  
 _file created on: 01-24-2020_
 
 This repository is a quick analysis of the Kaggle dataset of diabetes occurrence in Pima Indian females, which may be found [here](https://www.kaggle.com/uciml/pima-indians-diabetes-database). By no means is this a comprehensive exploration; for example, the model hypothesis set can be expanded, PCA features experimented with, and more involved feature engineering performed (both manually and with packages like `featuretools`).
+
+**IMPORTANT:** The pickled models in the `./models` directory were created under 32-bit Python 3.7.4, so the tree-based models **cannot** be unpickled under 64-bit Python. This is an issue dating from 2014 that has never been resolved and only affects tree-based models in `sklearn`. Details can be found on StackOverflow [here](https://stackoverflow.com/questions/21033038/scikits-learn-randomforrest-trained-on-64bit-python-wont-open-on-32bit-python).
 
 Contributors: Derek Huang
 
