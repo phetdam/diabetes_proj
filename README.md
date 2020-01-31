@@ -77,7 +77,7 @@ Except for `gbcr_srcv.pickle`, all files are pickled `sklearn.model_selection.Gr
 
 * **./models/gbcr_srcv.pickle**
 
-`shizukaBaseCV` results from training a `sklearn` gradient boosting model with shrinkage and without subsampling on `X_train` and `y_train`, using 400 tree stumps as base learners. Hoever, for each validation iteration, training folds were resampled using the `imblearn` implementation of SMOTE. Unlike `GridSearchCV` objects, hyperparameters were already fixed.
+`shizukaBaseCV` results from training a `sklearn` gradient boosting model with shrinkage and without subsampling on `X_train` and `y_train`, using 400 tree stumps as base learners. Hoever, for each validation iteration, training folds were resampled using the `imblearn` implementation of SMOTE. Hyperparameters were chosen a priori.
 
 ## Figures
 
